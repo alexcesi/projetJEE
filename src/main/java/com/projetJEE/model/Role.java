@@ -1,4 +1,4 @@
-package model;
+package com.projetJEE.model;
 
 import jakarta.persistence.*;
 
@@ -11,8 +11,8 @@ public class Role {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "role", nullable = false)
+    private String role;
 
     // Getters and setters
     public int getId() {
@@ -23,12 +23,12 @@ public class Role {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRole() {
+        return role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRole(String role) {
+        this.role = role;
     }
 
 }

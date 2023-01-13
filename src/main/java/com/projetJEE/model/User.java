@@ -1,6 +1,7 @@
-package model;
+package com.projetJEE.model;
 
 import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,8 +24,11 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+    
+    @Column(name = "mail", nullable = false)
+    private String mail;
 
-    @ManyToOne
+	@ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
@@ -56,6 +60,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+    public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public Role getRole() {

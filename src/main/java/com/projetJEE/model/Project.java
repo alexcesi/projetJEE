@@ -1,4 +1,4 @@
-package model;
+package com.projetJEE.model;
 
 import java.util.Date;
 
